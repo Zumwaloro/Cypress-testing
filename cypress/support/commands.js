@@ -11,3 +11,9 @@ Cypress.Commands.add('logout', () => {
         .click();
     cy.url().should('eq', 'https://www.saucedemo.com/');
 })
+
+Cypress.Commands.add('findMedia', (media) => {
+    cy.get('.footer>.social')
+        .find(media)
+        .should('be.visible');
+})

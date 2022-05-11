@@ -1,6 +1,7 @@
 ///<reference types="cypress" />
 
 const identifiers = require('../../fixtures/main')
+const credentials = require('../../fixtures/credentials')
 
 beforeEach(()=> {
     cy.visit('https://www.saucedemo.com/');
@@ -32,7 +33,17 @@ describe(
 
         it("User page elements", () => {
             cy.login(credentials.standard_user, credentials.password);
-                        
+            cy.get('#react-burger-menu-btn').should('be.visible');
+            cy.get('.shopping_cart_container').should('be.visible');
+            cy.get('.app_logo').should('be.visible');
+            cy.get('.inventory_list')
+                .children()
+                .should('have.length', 6);
+            cy.get('.footer').should('be.visible');
+            cy.findMedia('.social_twitter');
+            cy.findMedia('.social_facebook');
+            cy.findMedia('.social_linkedin');
+            cy.get('.footer_robot').should('be.visible');            
         })
     }
 )
