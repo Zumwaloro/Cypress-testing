@@ -29,5 +29,10 @@ describe(
                 });
             
         })
+
+        it("User page elements", () => {
+            cy.login(credentials.standard_user, credentials.password);
+                        
+        })
     }
 )
