@@ -1,6 +1,6 @@
 ///<reference types="cypress" />
 
-const credentials = require('../../fixtures/main')
+const identifiers = require('../../fixtures/main')
 
 beforeEach(()=> {
     cy.visit('https://www.saucedemo.com/');
@@ -19,14 +19,14 @@ describe(
             cy.get('.login_credentials_wrap').should('be.visible');
             cy.get('.login_credentials').find('h4').should('have.text', 'Accepted usernames are:');
             cy.get('.login_credentials')
-            .should((e) => {
-                expect(e.text()).to.equal(credentials.users);
-            })
+                .should((e) => {
+                    expect(e.text()).to.equal(identifiers.users);
+                })
             cy.get('.login_password').find('h4').should('have.text', 'Password for all users:');
             cy.get('.login_password')
-            .contains('secret_sauce').should((e) => {
-                expect(e.text()).to.equal(credentials.password);
-            });
+                .contains('secret_sauce').should((e) => {
+                    expect(e.text()).to.equal(identifiers.password);
+                });
             
         })
     }
