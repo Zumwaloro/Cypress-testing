@@ -2,9 +2,10 @@
 
 const identifiers = require('../../fixtures/main')
 const credentials = require('../../fixtures/credentials')
+const links = require('../../fixtures/links')
 
 beforeEach(()=> {
-    cy.visit('https://www.saucedemo.com/');
+    cy.visit(links.main);
 })
 
 describe(

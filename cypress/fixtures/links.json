@@ -1,0 +1,7 @@
+{
+    "main" : "https://www.saucedemo.com/",
+    "userPage" : "https://www.saucedemo.com/inventory.html",
+    "cart" : "https://www.saucedemo.com/cart.html",
+    "checkOutOne" : "https://www.saucedemo.com/checkout-step-one.html",
+    "checkOutTwo" : "https://www.saucedemo.com/checkout-step-two.html"
+}
