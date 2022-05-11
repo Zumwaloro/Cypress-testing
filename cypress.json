@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://www.booking.com",
+    "ignoreTestFiles": "**/examples/*/*.js",
+    "viewportWidth": 1920,
+    "viewportHeight": 1080
+}
